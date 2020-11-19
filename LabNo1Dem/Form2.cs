@@ -69,7 +69,7 @@ namespace LabNo1Dem
         private void Btna_Click(object sender, EventArgs e)
         {
             //Form1 Main = this.Owner as Form1;
-            //if(txt.Text != "")
+            //if (txt.Text != "")
             //{
             //    if (this.rbtn1.Checked == true)
             //        Main.lbox1.Items.Add(this.txt.Text);
