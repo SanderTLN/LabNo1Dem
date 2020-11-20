@@ -45,27 +45,31 @@ namespace LabNo1Dem
             lbl2 = new Label();
             lbl2.Text = "Раздел 2";
             lbl2.Size = new Size(60, 20);
-            lbl2.Location = new Point(410, 20);
+            lbl2.Location = new Point(400, 20);
             panel.Controls.Add(lbl2);
 
             combox1 = new ComboBox();
-            combox1.Text = "Сортировка по...";
             combox1.Size = new Size(180, 20);
             combox1.Location = new Point(20, 50);
+            combox1.Items.Add("Сортировка по...");
             combox1.Items.Add("Алфавиту (по возрастанию)");
             combox1.Items.Add("Алфавиту (по убыванию)");
             combox1.Items.Add("Длине слова (по возрастанию)");
             combox1.Items.Add("Длине слова (по убыванию)");
+            combox1.DropDownStyle = ComboBoxStyle.DropDownList;
+            combox1.SelectedIndex = 0;
             panel.Controls.Add(combox1);
 
             combox2 = new ComboBox();
-            combox2.Text = "Сортировка по...";
             combox2.Size = new Size(180, 20);
             combox2.Location = new Point(340, 50);
+            combox2.Items.Add("Сортировка по...");
             combox2.Items.Add("Алфавиту (по возрастанию)");
             combox2.Items.Add("Алфавиту (по убыванию)");
             combox2.Items.Add("Длине слова (по возрастанию)");
             combox2.Items.Add("Длине слова (по убыванию)");
+            combox2.DropDownStyle = ComboBoxStyle.DropDownList;
+            combox2.SelectedIndex = 0;
             panel.Controls.Add(combox2);
 
             lbox1 = new ListBox();
@@ -172,13 +176,13 @@ namespace LabNo1Dem
 
             cbox1 = new CheckBox();
             cbox1.Text = "Раздел 1";
-            cbox1.Size = new Size(70, 20);
+            cbox1.Size = new Size(80, 20);
             cbox1.Location = new Point(230, 90);
             gbox1.Controls.Add(cbox1);
 
             cbox2 = new CheckBox();
             cbox2.Text = "Раздел 2";
-            cbox2.Size = new Size(70, 20);
+            cbox2.Size = new Size(80, 20);
             cbox2.Location = new Point(230, 120);
             gbox1.Controls.Add(cbox2);
 
@@ -467,6 +471,9 @@ namespace LabNo1Dem
                 rbtn3.Checked = false;
                 cbox1.Checked = false;
                 cbox2.Checked = false;
+                txt.Text = "";
+                combox1.SelectedIndex = 0;
+                combox2.SelectedIndex = 0;
             }
         }
 
