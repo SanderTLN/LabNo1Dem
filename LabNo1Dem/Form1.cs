@@ -17,7 +17,7 @@ namespace LabNo1Dem
         Panel panel;
         Label lbl1, lbl2, lbl3;
         ComboBox combox1, combox2;
-        ListBox lbox1, lbox2, lbox3;
+        public ListBox lbox1, lbox2, lbox3;
         Button btnl, btnr, btnAl, btnAr, btnr11, btnr21, btnr12, btnr22, btnr13, btnr23, btnf, btnc, btne, btns;
         GroupBox gbox1, gbox2;
         TextBox txt;
@@ -172,13 +172,13 @@ namespace LabNo1Dem
 
             cbox1 = new CheckBox();
             cbox1.Text = "Раздел 1";
-            cbox1.Size = new Size(100, 20);
+            cbox1.Size = new Size(70, 20);
             cbox1.Location = new Point(230, 90);
             gbox1.Controls.Add(cbox1);
 
             cbox2 = new CheckBox();
             cbox2.Text = "Раздел 2";
-            cbox2.Size = new Size(100, 20);
+            cbox2.Size = new Size(70, 20);
             cbox2.Location = new Point(230, 120);
             gbox1.Controls.Add(cbox2);
 
@@ -385,22 +385,20 @@ namespace LabNo1Dem
 
         private void Btnr_Click(object sender, EventArgs e)
         {
-            lbox2.BeginUpdate();
-            foreach(object Item in lbox1.SelectedItems)
+            for(int i = 0; i < lbox1.SelectedItems.Count; i++)
             {
-                lbox2.Items.Add(Item);
+                lbox2.Items.Add(lbox1.SelectedItems[i]);
+                lbox1.Items.Remove(lbox1.SelectedItems[i]);
             }
-            lbox2.EndUpdate();
         }
 
         private void Btnl_Click(object sender, EventArgs e)
         {
-            lbox1.BeginUpdate();
-            foreach (object Item in lbox2.SelectedItems)
+            for (int i = 0; i < lbox2.SelectedItems.Count; i++)
             {
-                lbox1.Items.Add(Item);
+                lbox1.Items.Add(lbox2.SelectedItems[i]);
+                lbox2.Items.Remove(lbox2.SelectedItems[i]);
             }
-            lbox1.EndUpdate();
         }
 
         private void Btnr22_Click(object sender, EventArgs e)
