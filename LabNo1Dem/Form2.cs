@@ -63,7 +63,13 @@ namespace LabNo1Dem
             btnc.Text = "Отмена";
             btnc.Size = new Size(120, 25);
             btnc.Location = new Point(150, 130);
+            btnc.Click += Btnc_Click;
             Controls.Add(btnc);
+        }
+
+        private void Btnc_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
 
         private void Btna_Click(object sender, EventArgs e)
